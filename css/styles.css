@@ -300,6 +300,15 @@ section{padding:var(--sp-section) 0}
 @media (max-width:920px){
   .hero{padding-bottom:calc(var(--sp-band) + 40px)}
 }
+/* Ultrawide: the vertical crop deepens with viewport width and starts
+   clipping the painted building logo (~1985px+). Raise the focal point
+   there only — standard desktop and mobile crops stay as approved. */
+@media (min-width:1960px){
+  .hero-img{object-position:42% 22%}
+}
+@media (min-width:3800px){
+  .hero-img{object-position:42% 15%}
+}
 
 /* ============================================================
    FOOTER
