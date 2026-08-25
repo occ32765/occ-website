@@ -710,3 +710,11 @@ section{padding:var(--sp-section) 0}
   .reveal{opacity:1;transform:none;transition:none}
   .btn{transition:none}
 }
+
+.policy-stubs .stub-wide {
+  grid-column: 1 / -1;
+}
+.policy-stubs .stub-wide p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
