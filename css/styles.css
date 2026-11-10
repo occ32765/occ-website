@@ -718,3 +718,37 @@ section{padding:var(--sp-section) 0}
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+/* ---------- HOLIDAY BAR (driven by js/holiday.js) ---------- */
+.holiday-bar{background:var(--navy-ink);border-top:3px solid var(--amber)}
+.holiday-bar.is-red{border-top-color:var(--red)}
+.holiday-in{
+  max-width:1280px;margin:0 auto;padding:9px 20px;
+  display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px;
+}
+.holiday-tag{
+  font-family:var(--display);font-weight:700;font-size:.92rem;line-height:1;
+  letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+  background:var(--amber);color:var(--navy-ink);padding:6px 10px 5px;border-radius:var(--radius);
+}
+.is-red .holiday-tag{background:var(--red);color:#fff}
+.holiday-msg{
+  flex:1 1 24em;font-family:var(--mono);font-size:.8rem;letter-spacing:.03em;
+  line-height:1.5;color:var(--mist);
+}
+.holiday-msg b{color:#fff;font-weight:600}
+.holiday-link{
+  font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;white-space:nowrap;color:var(--amber-bright);
+  min-height:32px;display:inline-flex;align-items:center;
+}
+.is-red .holiday-link{color:var(--red-lift)}
+.holiday-link:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:600px){
+  .holiday-in{padding:8px 16px 9px;gap:4px 12px;justify-content:space-between}
+  .holiday-tag{font-size:.84rem;padding:5px 8px 4px}
+  .holiday-lead{display:none}
+  .holiday-link{font-size:.95rem;min-height:30px}
+  .holiday-msg{flex-basis:100%;order:3;font-size:.76rem}
+}
+.hours .holiday-row span:first-child{font-weight:600}
